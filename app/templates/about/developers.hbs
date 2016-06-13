@@ -1,2 +1,12 @@
 Built with &lt;3 and hatred for your liver by Steven and The Bangarangs
+{{#if isCreating}}
+  <button type="button" name="button" {{action "addTeamMember"}}>Done</button>
+{{else}}
+  <button type="button" name="button" {{action "addTeamMember"}}>Add a team member</button>
+{{/if}}
+
+{{#if isCreating}}
+  {{input value=newMember }}
+  <button type="button" name="button" {{action "addMember" newMember}}>Add Member</button>
+{{/if}}
 {{list-team team-members=model}}
