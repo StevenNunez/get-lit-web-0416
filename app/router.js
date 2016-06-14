@@ -10,6 +10,12 @@ Router.map(function() {
     this.route('developers');
     this.route('lawyers');
   });
+  this.route('cocktails', function() {
+    this.route('cocktail', {
+      path: ':cocktail_id'
+    });
+    this.route('new');
+  });
 });
 
 export default Router;

@@ -1,0 +1,28 @@
+<h1>New Cocktail</h1>
+
+<form {{action "submit" on="submit"}}>
+  <div class="">
+    <label for="">Name</label>
+    {{input value=model.name}}
+  </div>
+  <div class="">
+    <label for="">Description</label>
+    {{input value=model.description}}
+  </div>
+  <div class="">
+    <a href="#" {{action "addProportion" class='btn btn-primary'}}>+</a>
+    {{#each model.proportions as |proportion|}}
+      {{input value=proportion.amount}}
+      {{input value=proportion.ingredientName}}
+    {{/each}}
+  </div>
+  <div class="">
+    <label for="">Instructions</label>
+    {{input value=model.instructions}}
+  </div>
+  <div class="">
+    <label for="">Source</label>
+    {{input value=model.source}}
+  </div>
+  <input type="submit" value="Submit">
+</form>

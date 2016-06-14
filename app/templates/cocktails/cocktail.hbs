@@ -1,0 +1,10 @@
+<h1>{{model.name}}</h1>
+<h2>{{model.description}}</h2>
+<ul>
+  {{#each model.proportions as |proportion|}}
+    <li>{{proportion.amount}} of {{proportion.ingredientName}}</li>
+  {{/each}}
+</ul>
+
+<em>{{model.instructions}}</em>
+<em>{{model.source}}</em>
