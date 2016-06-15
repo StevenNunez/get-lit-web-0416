@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
     },
     submit(){
       this.get('model').save().then((cocktail) => {
-        this.transitionTo("cocktails.cocktail", cocktail)
+        this.transitionToRoute("cocktails.cocktail", cocktail)
       }).catch((reason) =>{
         alert('boop')
       })
